@@ -15,17 +15,6 @@ ul.addEventListener("click", handleCopy);
 
 ul.addEventListener("click", handleDelete);
 
-const stringifyiedLocalStorage = JSON.stringify(
-  localStorage.getItem("palette")
-);
-if (stringifyiedLocalStorage === "[]") {
-  setLocalStorageKey("palette", initPalette);
-}
-
-if (getLocalStorageKey("palette").length === 0) {
-  setLocalStorageKey("palette", initPalette);
-}
-
 const main = () => {
   initPalette();
   document
@@ -34,3 +23,7 @@ const main = () => {
 };
 
 main();
+
+if (getLocalStorageKey("palette").length === 0) {
+  setLocalStorageKey("palette", initPalette);
+}
