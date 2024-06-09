@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palette Picker
+    </title>
+  </head>
+  <body>
+    <main>
+      <div id="app">
+        <h1>Palette Picker</h1>
+        <section>
+          <form aria-labelledby="create-palette">
+            <h2 id="create-palette">Add a Palette</h2>
+            <div>
+              <label for="palette-title-input">Palette Title:</label>
+              <input type="text" id="palette-title-input" name="paletteTitle" required>
+            </div>
+            <div>
+              <label for="color-1-input">Color #1</label>
+              <input type="color" id="color-1-input" name="color1">
+            </div>
+            <div>
+              <label for="color-2-input">Color #2</label>
+              <input type="color" id="color-2-input" name="color2">
+            </div>
+            <div>
+              <label for="color-3-input">Color #3</label>
+              <input type="color" id="color-3-input" name="color3">
+            </div> 
+            <fieldset>
+              <legend>Temperature</legend>
+              
+                <input type="radio" value="warm" id="warm-input" name="temperature">
+                <label for="warm-input">Warm</label>
+                <input type="radio" value="neutral" id="neutral-input" name="temperature" checked>
+                <label for="neutral-input">Neutral</label>
+                <input type="radio" value="cool" id="cool-input" name="temperature">
+                <label for="cool-input">Cool</label>
+            </fieldset>
+            <button>Create the palette</button>
+          </form>
+        </section>
+        <section>
+          <h2>Palette</h2>
+          <ul id="palette-list">
+          </ul>
+        </section>
+      </div>
+      <script type="module" src="/main.js"></script>
+    </main>
+  </body>
+</html>
